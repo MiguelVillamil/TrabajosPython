@@ -12,7 +12,10 @@ def menu2():
   print(colored("2.resta\n","green"))
   print(colored("3. multiplicacion\n","green"))
   print(colored("4.division\n","green"))
-  print(colored("5.salir\n","red"))
+  print(colored("5.elevar\n","green"))
+  print(colored("6. cociente\n","green"))
+  print(colored("7.resto\n","green"))
+  print(colored("8.salir\n","red"))
   respuesta= input("")
   return respuesta
 
@@ -36,6 +39,22 @@ def div():
   num1= float(input(colored("ingrese el primer numero\n","cyan")))
   num2= float(input(colored("ingrese el segundo numeroo\n","cyan")))
   return num1/num2
+
+def elev():
+  num1= float(input(colored("ingrese el primer numero\n","cyan")))
+  num2= float(input(colored("ingrese el segundo numeroo\n","cyan")))
+  return num1**num2
+
+def cocien():
+  num1= float(input(colored("ingrese el primer numero\n","cyan")))
+  num2= float(input(colored("ingrese el segundo numeroo\n","cyan")))
+  return num1//num2
+
+def mod():
+  num1= float(input(colored("ingrese el primer numero\n","cyan")))
+  num2= float(input(colored("ingrese el segundo numeroo\n","cyan")))
+  return num1%num2
+
 
 def muestrares(num):
   print(colored("La respuesta es: ","green"),num,"\n")
@@ -68,11 +87,23 @@ def main():
                 continuar()
               else:
                 if(opcion=="5"):
-                  salida2=True
+                  muestrares(elev())
                   continuar()
+
                 else:
-                  print(colored("No ha ingresado una opcion correcta","red") )
-                  continuar()  
+                  if(opcion=="6"):
+                    muestrares(cocien())
+                  else:  
+                    if(opcion=="7"):
+                      muestrares(mod())
+                    else:
+                      if (opcion=="8"):
+                        salida2=True
+                        continuar()
+                      else:
+                        print(colored("No ha ingresado una opcion correcta","red") )
+                        continuar()
+
     else:
       if(opcion=="2"):
         salida=True
