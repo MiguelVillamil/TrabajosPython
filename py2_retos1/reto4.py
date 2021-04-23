@@ -21,6 +21,8 @@ def compara():
       else:
         print(colored(" no ha ingresado un par de numeros reales \n","green"))
 
+def continuar():
+  input(colored("Presiona Enter para continuar...","yellow"))
 
 def main():
   salida=False

@@ -10,6 +10,9 @@ def cuenta():
   for i in range (10,21,2):
     print(colored(i,"cyan"))
 
+def continuar():
+  input(colored("Presiona Enter para continuar...","yellow"))
+
 def main():
   salida=False
   while (salida==False):
