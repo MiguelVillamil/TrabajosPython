@@ -6,10 +6,11 @@ archivo.close
 #print(type(lineas))
 #c=[1,2,3]
 #print(type(c))
-A=[palabra[0:-1] for palabra in lineas]
+A=[palabra[0:-1] for palabra in lineas] #crea uja lista que contiene todos los datos de lista pero sin el "\n"
+
 #print(A)
 
-def busca_rima(rima):
+def busca_rima(rima): #devuelve una lista con las palabras de la lista A con terminacion en el parametro
   
   Pala_rima=[palabra for palabra in A if palabra[-len(rima):]==rima]
   return Pala_rima

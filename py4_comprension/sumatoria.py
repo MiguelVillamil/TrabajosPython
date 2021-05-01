@@ -1,12 +1,12 @@
 from termcolor import colored 
 
-def sumatoria_ejem1(A,B,C):
+def sumatoria_ejem1(A,B,C): #Hace la operacion sumatoria(A_i*B_i+C_i) devuelve el resulta en string
   n= len(A)
   sumatoria=sum((A[i]*B[i])+C[i] for i in range(n))+n**2
   
   return str(sumatoria)
 
-def Crea_lista(n):
+def Crea_lista(n):#permite crear una lista que contien datos float, el parametro n es el numero de datos que contiene la lista 
   lista=[]
   for i in range(int(n)):
     istr=str(i+1)

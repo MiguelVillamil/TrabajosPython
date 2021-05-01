@@ -1,12 +1,12 @@
 from termcolor import colored 
 
-def lista_ejem2(A,B):
+def lista_ejem2(A,B): #crea una lista resultante de ((A[i+1]^2)*B[2*i])+B[n+i] la devuelve como string
   n= len(A)//2
   C=[((A[i+1]**2)*B[2*i])+B[n+i]for i in range(n)]
   
   return str(C)
 
-def Crea_lista(n):
+def Crea_lista(n): #permite crear una lista que contiene datos tipo float, el parametro n es la cantidad de datos que posee la lista
   lista=[]
   for i in range(int(n)):
     istr=str(i+1)
