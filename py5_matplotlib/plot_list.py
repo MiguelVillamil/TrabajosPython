@@ -7,13 +7,18 @@ def finalizar():
 def menu():
   print(colored("Ejercicio Crear lista \n","yellow"))
   print(colored("que deseas hacer? \n","yellow"))
-  print(colored("1. crear lista ejemplo 2\n","green"))
-  print(colored("2. salir\n","red"))
+  print(colored("1. crear lista\n","green"))
+  print(colored("2. Terminar Programa\n","red"))
   respuesta= input("")
   return respuesta
 
 def continuar():
   input(colored("Presiona Enter para continuar...","yellow"))
+
+def imprimeLista(lista):
+    print(colored("Lista = ","green"),colored(str (lista)+"\n","cyan"))
+    plt.plot(lista)
+    plt.show
 
 def creaLista(n):
   lista=[]
@@ -24,7 +29,7 @@ def creaLista(n):
     else:
       n = siImpar(n) 
     lista.append(n)
-    print(lista)   
+    #print(lista)   
   return lista   
 
 def siPar(n):
@@ -54,9 +59,9 @@ def main():
   while (salida==False):
     opcion=menu()
     if (opcion=="1"):
-      lista=creaLista(depuraN())
-      print(colored("Lista = ","green"),colored(tostring(lista)+"\n","cyan"))
-      
+      #lista=creaLista(depuraN())
+      #print(colored("Lista = ","green"),colored(str (lista)+"\n","cyan"))
+      imprimeLista(creaLista(depuraN()))
       
       
       
